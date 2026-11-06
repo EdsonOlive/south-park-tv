@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.seuusuario.southparktv" version="1.0.0" xmlns="http://w3.org" xmlns:cdv="http://apache.org">
+    <name>South Park TV</name>
+    <description>Aplicativo para assistir South Park Studios na TV.</description>
+    <author email="seuemail@exemplo.com" href="http://github.com">Seu Nome</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    
+    <!-- Configurações específicas para Android TV -->
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="ShowSplashScreen" value="false" />
+    <preference name="ScrollEnabled" value="true" />
+    
+    <platform name="android">
+        <!-- Habilita o modo de navegação por controle remoto (D-Pad) -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </config-file>
+    </platform>
+</widget>
